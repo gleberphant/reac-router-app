@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Inicio from './paginas/Inicio/Inicio'
-import Sobre from './paginas/Sobre/Sobre';
+import Inicio from 'paginas/Inicio/Inicio'
+import Sobre from 'paginas/Sobre/Sobre';
 import PaginaNaoEncontrada from './paginas/PaginaNaoEncontrada/PaginaNaoEncontrada';
-import Menu from './paginas/Menu/Menu';
+import Menu from 'paginas/Menu/Menu';
 
 function AppRoutes() {
   return (
