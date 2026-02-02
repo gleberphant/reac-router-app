@@ -1,7 +1,17 @@
-export default function Inicio(){
+import Post from 'componentes/Post/Post'
 
-return (
-    <><h1> GO-ACT: Integração GOLANG E REACT</h1></>
-)
+import styles from './Inicio.module.css'
+
+import posts from 'json/posts.json'
+
+export default function Inicio() {
+
+    return (
+        <>
+            
+            <ul className={styles.posts}>
+                {posts.map((post) => <Post post={post} />)}
+            </ul></>
+    )
 
 }
