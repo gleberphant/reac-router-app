@@ -1,11 +1,11 @@
 import styles from "./Rodape.module.css"
-import {ReactComponent as MarcaRegistrada } from 'assets/marca_registrada.svg'
+import { ReactComponent as GravatinhaSVG } from 'assets/gravatinha_marca.svg'
 export default function Rodape() {
 
     return (
-        <footer className={styles.rodape}> 
-        <MarcaRegistrada />
-        Desenvolvido por Gravatinha
-         </footer>
+        <div className={styles.rodape} >
+        <GravatinhaSVG />
+            Desenvolvido por Gravatinha
+        </div>
     )
 }

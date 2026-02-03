@@ -19,23 +19,21 @@ func main() {
 
 	//--páginas
 	log.Println("CONFIGURANDO ROTAS DE PÁGINAS")
-	controllerIndex := func(w http.ResponseWriter, r *http.Request) {
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		page, _ := template.ParseFiles("../build/index.html")
 		page.Execute(w, nil)
-	}
-
-	http.HandleFunc("/", controllerIndex) // controla todas rotas que começam com '/' que não sejam especificadas
+	}) // controla todas rotas que começam com '/' que não sejam especificadas
 
 	//--API
 	log.Println("CONFIGURANDO ROTAS DE API")
-	controllerApi := func(w http.ResponseWriter, r *http.Request) {
+
+	http.HandleFunc("/api/", func(w http.ResponseWriter, r *http.Request) {
 		if err := json.NewEncoder(w).Encode(map[string]any{"Mensagem": "Ola API"}); err != nil {
 			log.Println(err.Error())
 		}
 
-	}
-
-	http.HandleFunc("/api/", controllerApi)
+	})
 
 	//servidor
 	log.Println("CONFIGURANDO SERVIDOR")

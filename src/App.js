@@ -1,8 +1,8 @@
-import AppRoutes from 'AppRoutes';
+import Rotas from 'Rotas';
 
 function App() {
   return (
-    <AppRoutes />
+    <Rotas />
   )
 }
 
