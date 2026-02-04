@@ -9,9 +9,9 @@ export default function Inicio() {
 
     return (
         <>
-            <Banner />
+            {/* <Banner /> */}
             <ul className={styles.posts}>
-                {posts.map((post) => <PostCard post={post} />)}
+                {posts.map((post, indice) => <PostCard key={indice} post={post} />)}
             </ul></>
     )
 
